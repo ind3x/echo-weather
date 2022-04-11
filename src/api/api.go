@@ -9,8 +9,5 @@ import (
 func MainGroup(e *echo.Echo) {
 	// Route / to handler function
 	e.GET("/health-check", handlers.HealthCheck)
-}
-
-func AdminGroup(g *echo.Group) {
-	g.GET("/main", handlers.MainAdmin)
+	e.GET("/cities", handlers.GetCities)
 }
