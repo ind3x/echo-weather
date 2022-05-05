@@ -8,6 +8,11 @@ import (
 
 func MainGroup(e *echo.Echo) {
 	// Route / to handler function
-	e.GET("/health-check", handlers.HealthCheck)
-	e.GET("/cities", handlers.GetCities)
+	e.GET("/healthy", handlers.HealthCheck)
+	// e.GET("/cities", handlers.GetCities)
+}
+
+func CitiesGroup(g *echo.Group) {
+	g.GET("", handlers.GetCities)
+	g.GET("/:q", handlers.GetCity)
 }

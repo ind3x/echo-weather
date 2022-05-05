@@ -10,8 +10,14 @@ func New() *echo.Echo {
 	// create a new echo instance
 	e := echo.New()
 
+	//create groups
+	citiesGroup := e.Group("/cities")
+
 	//set main routes
 	api.MainGroup(e)
+
+	//set groupRoutes
+	api.CitiesGroup(citiesGroup)
 
 	return e
 }
