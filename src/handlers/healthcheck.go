@@ -9,9 +9,6 @@ import (
 
 // HealthCheck - Health Check Handler
 func HealthCheck(c echo.Context) error {
-	//requestID := uuid.NewV4()
-	//c.Logger().Infof("RequestID: %s", requestID)
-
 	resp := vo.HealthCheckResponse{
 		Message: "Everything is good!",
 	}
