@@ -9,7 +9,7 @@ import (
 
 // HealthCheck - Health Check Handler
 func HealthCheck(c echo.Context) error {
-	resp := vo.HealthCheckResponse{
+	resp := vo.HealthCheck{
 		Message: "Everything is good!",
 	}
 	return c.JSON(http.StatusOK, resp)

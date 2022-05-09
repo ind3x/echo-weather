@@ -1,7 +1,6 @@
 package vo
 
 //Response
-type HealthCheckResponse struct {
+type HealthCheck struct {
 	Message string `json:"message"`
 }
-
